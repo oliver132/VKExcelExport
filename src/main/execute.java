@@ -14,7 +14,7 @@ public class execute {
 	public static void main(String[] args) throws Exception, IOException {
 		// TODO Auto-generated method stub
 		
-		XSLXReader reader = new XSLXReader("C:\\Users\\Oli\\Desktop\\test.xlsx", 0);
+		XSLXReader reader = new XSLXReader("worldCarc_Export.xlsx", 0);
 		ArrayList<VKModel> vk = new ArrayList<VKModel>();
 		
 		/*
@@ -25,7 +25,7 @@ public class execute {
 		 * Integer Sprache, Integer Notiz, Integer Veranstaltung, Integer Email, Integer Website
 		 */
 		for (int i=2; i<reader.rowCount+1; i++){
-			vk.add(reader.readRow(i, 3, 4, null, 0, 6, 5, 8, 9, null, 10, 11, 12, null, null, 14, null, 7, 25));
+			vk.add(reader.readRow(i, 0, 1, null, 10, 2, 3, 4, 5, 9, 11, 14, 12, 15, null, 17, 18, 7, 16));
 		}
 		
 		XLSXExporter exporter = new XLSXExporter();
@@ -33,7 +33,7 @@ public class execute {
 			exporter.addVK(vk_temp);
 		}
 		
-		exporter.exportAsFile("tabelle1.xlsx");
+		exporter.exportAsFile("tabelle1111.xlsx");
 
 	}
 
